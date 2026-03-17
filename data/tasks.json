@@ -28,11 +28,33 @@
         {
           "id": "comment_agent_001",
           "author": "Byte",
-          "text": "\u2705 Task completed! Mission Control webhook integration is now working. Welcome aboard, Andrew!",
+          "text": "\u2705 Task completed! Welcome to Mission Control, Andrew!",
           "timestamp": "2026-03-17T20:27:00Z"
         }
       ],
+      "processingStartedAt": null,
+      "processing": null,
+      "sortOrder": 0,
       "updatedAt": "2026-03-17T20:27:00Z"
+    }
+  ],
+  "lastUpdated": "2026-03-17T20:15:41.217Z",
+  "activities": [
+    {
+      "type": "moved",
+      "actor": "AparkE041",
+      "task": "Welcome to Mission Control! \ud83d\udc4b",
+      "from": "backlog",
+      "to": "in_progress",
+      "time": "just now"
+    },
+    {
+      "type": "moved",
+      "actor": "AparkE041",
+      "task": "Welcome to Mission Control! \ud83d\udc4b",
+      "from": "in_progress",
+      "to": "backlog",
+      "time": "just now"
     }
   ]
 }
