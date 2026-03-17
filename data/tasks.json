@@ -4,7 +4,7 @@
       "id": "welcome_001",
       "title": "Welcome to Mission Control! \ud83d\udc4b",
       "description": "This is your first task. Move it to 'in_progress' to have your agent work on it.",
-      "status": "done",
+      "status": "in_progress",
       "subtasks": [
         {
           "id": "sub_001",
@@ -41,7 +41,7 @@
       "processingStartedAt": null,
       "processing": null,
       "sortOrder": 0,
-      "updatedAt": "2026-03-17T20:27:00Z",
+      "updatedAt": "2026-03-17T20:36:00Z",
       "completedAt": "2026-03-17T20:29:53.808Z"
     }
   ],
