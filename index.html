@@ -6755,8 +6755,13 @@ ${learning.tags.map(t => `#${t}`).join(' ')}
             showToast('success', 'Session key saved');
         }
         
-        // Thinking API configuration
-        const THINKING_API_URL = 'https://your-gateway.example.com/api/thinking';
+        // Thinking API configuration (derived from gateway URL)
+        function getThinkingApiUrl() {
+            const url = getGatewayUrl();
+            if (!url) return '';
+            // Normalize: remove trailing slash and add /api/thinking
+            return url.replace(/\/$/, '') + '/api/thinking';
+        }
         
         // Get stored hooks token from localStorage
         function getHooksToken() {
