@@ -3541,6 +3541,7 @@
         }
 
         function logout() {
+            localStorage.removeItem('gh_token');
             localStorage.removeItem('github_token');
             localStorage.removeItem('github_user');
             STATE.token = null;
@@ -3569,7 +3570,7 @@
         }
 
         function checkSavedAuth() {
-            const token = localStorage.getItem('github_token');
+            const token = localStorage.getItem('gh_token');
             const userJson = localStorage.getItem('github_user');
 
             if (token && userJson) {
@@ -6863,7 +6864,7 @@
                 </div>
             `;
 
-            const token = STATE.token || localStorage.getItem('github_token');
+            const token = STATE.token || localStorage.getItem('gh_token');
 
             if (!token) {
                 container.innerHTML = `
