@@ -4740,7 +4740,7 @@ Output the consolidated content in clean Markdown format:`;
                     <div class="task-description">${task.description}</div>
                     <div class="task-meta">
                         <div class="task-tags">
-                            ${task.tags.map(tag => `<span class="task-tag ${tag}">${tag}</span>`).join('')}
+                            ${(task.tags || []).map(tag => `<span class="task-tag ${tag}">${tag}</span>`).join('')}
                         </div>
                         ${commentIndicator}
                     </div>

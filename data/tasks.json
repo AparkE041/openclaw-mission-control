@@ -4,7 +4,7 @@
       "id": "welcome_001",
       "title": "Welcome to Mission Control! 👋",
       "description": "This is your first task. Move it to 'in_progress' to have your agent work on it.",
-      "status": "backlog",
+      "status": "in_progress",
       "subtasks": [
         { "id": "sub_001", "title": "Open the dashboard", "done": true },
         { "id": "sub_002", "title": "Move a task to In Progress", "done": false },
