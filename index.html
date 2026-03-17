@@ -7135,13 +7135,29 @@
                     showDashboard();
                     await loadTasksFromGitHub();
                     if (!(await loadCronsFromGateway())) await loadCronsFromGitHub();
-                } else {
+                } else if (response.status === 401) {
+                    // Only delete token on actual auth failure
                     localStorage.removeItem('gh_token');
                     showLoginScreen();
+                } else {
+                    // Non-auth error (rate limit, API issue) — keep token, try dashboard
+                    console.warn('Auth check returned', response.status, '— proceeding with cached token');
+                    STATE.token = token;
+                    const cachedUser = localStorage.getItem('github_user');
+                    if (cachedUser) STATE.user = JSON.parse(cachedUser);
+                    showDashboard();
+                    await loadTasksFromGitHub();
+                    if (!(await loadCronsFromGateway())) await loadCronsFromGitHub();
                 }
             } catch (e) {
-                console.error('Auth check failed:', e);
-                showLoginScreen();
+                // Network error — keep token and show dashboard anyway
+                console.warn('Auth check failed (network):', e.message, '— proceeding with cached token');
+                STATE.token = token;
+                const cachedUser2 = localStorage.getItem('github_user');
+                if (cachedUser2) STATE.user = JSON.parse(cachedUser2);
+                showDashboard();
+                await loadTasksFromGitHub();
+                if (!(await loadCronsFromGateway())) await loadCronsFromGitHub();
             }
         }
 
@@ -7189,6 +7205,11 @@
                 if (response.ok) {
                     const user = await response.json();
                     localStorage.setItem('gh_token', token);
+                    localStorage.setItem('github_user', JSON.stringify({
+                        login: user.login,
+                        avatar_url: user.avatar_url,
+                        name: user.name || user.login
+                    }));
                     STATE.token = token;
                     STATE.user = user;
                     showDashboard();
