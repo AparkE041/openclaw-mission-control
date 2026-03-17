@@ -4,7 +4,7 @@
       "id": "welcome_001",
       "title": "Welcome to Mission Control! \ud83d\udc4b",
       "description": "This is your first task. Move it to 'in_progress' to have your agent work on it.",
-      "status": "in_progress",
+      "status": "review",
       "subtasks": [
         {
           "id": "sub_001",
@@ -42,7 +42,9 @@
       "processing": null,
       "sortOrder": 0,
       "updatedAt": "2026-03-17T20:38:00Z",
-      "completedAt": "2026-03-17T20:29:53.808Z"
+      "completedAt": "2026-03-17T20:29:53.808Z",
+      "completion_comment": "Task acknowledged and processed by Mission Control poller. Agent successfully received and processed the welcome task. Ready for closure.",
+      "completed_at": "2026-03-17T20:39:02.959601Z"
     }
   ],
   "lastUpdated": "2026-03-17T20:29:53.808Z",
