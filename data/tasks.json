@@ -2,17 +2,37 @@
   "tasks": [
     {
       "id": "welcome_001",
-      "title": "Welcome to Mission Control! 👋",
+      "title": "Welcome to Mission Control! \ud83d\udc4b",
       "description": "This is your first task. Move it to 'in_progress' to have your agent work on it.",
-      "status": "in_progress",
+      "status": "review",
       "subtasks": [
-        { "id": "sub_001", "title": "Open the dashboard", "done": true },
-        { "id": "sub_002", "title": "Move a task to In Progress", "done": false },
-        { "id": "sub_003", "title": "Watch the agent work", "done": false }
+        {
+          "id": "sub_001",
+          "title": "Open the dashboard",
+          "done": true
+        },
+        {
+          "id": "sub_002",
+          "title": "Move a task to In Progress",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Watch the agent work",
+          "done": false
+        }
       ],
       "priority": "low",
       "dod": "Agent successfully receives and processes the task",
-      "comments": []
+      "comments": [
+        {
+          "id": "comment_agent_001",
+          "author": "Byte",
+          "text": "\u2705 Task completed! Mission Control webhook integration is now working. Welcome aboard, Andrew!",
+          "timestamp": "2026-03-17T20:27:00Z"
+        }
+      ],
+      "updatedAt": "2026-03-17T20:27:00Z"
     }
   ]
 }
