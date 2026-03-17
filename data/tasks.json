@@ -30,6 +30,12 @@
           "author": "Byte",
           "text": "✅ Task completed! Welcome to Mission Control, Andrew!",
           "timestamp": "2026-03-17T20:27:00Z"
+        },
+        {
+          "id": "comment_test_webhook",
+          "author": "Andrew",
+          "text": "Testing webhook integration",
+          "timestamp": "2026-03-17T20:33:00Z"
         }
       ],
       "processingStartedAt": null,
