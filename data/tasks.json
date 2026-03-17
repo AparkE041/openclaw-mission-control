@@ -51,9 +51,22 @@
       "completedAt": "2026-03-17T20:42:04.386Z",
       "completion_comment": "Task acknowledged and processed by Mission Control poller. Agent successfully received and processed the welcome task. Ready for closure.",
       "completed_at": "2026-03-17T20:39:02.959601Z"
+    },
+    {
+      "id": "task_1773780160973",
+      "title": "Test",
+      "description": "this is a test task to make sure everything works",
+      "project": "",
+      "tags": [
+        ""
+      ],
+      "subtasks": [],
+      "priority": "medium",
+      "createdAt": "2026-03-17T20:42:40.973Z",
+      "status": "backlog"
     }
   ],
-  "lastUpdated": "2026-03-17T20:42:04.386Z",
+  "lastUpdated": "2026-03-17T20:42:40.973Z",
   "activities": [
     {
       "type": "moved",
