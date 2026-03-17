@@ -2,9 +2,9 @@
   "tasks": [
     {
       "id": "welcome_001",
-      "title": "Welcome to Mission Control! \ud83d\udc4b",
+      "title": "Welcome to Mission Control! 👋",
       "description": "This is your first task. Move it to 'in_progress' to have your agent work on it.",
-      "status": "review",
+      "status": "done",
       "subtasks": [
         {
           "id": "sub_001",
@@ -28,22 +28,31 @@
         {
           "id": "comment_agent_001",
           "author": "Byte",
-          "text": "\u2705 Task completed! Welcome to Mission Control, Andrew!",
+          "text": "✅ Task completed! Welcome to Mission Control, Andrew!",
           "timestamp": "2026-03-17T20:27:00Z"
         }
       ],
       "processingStartedAt": null,
       "processing": null,
       "sortOrder": 0,
-      "updatedAt": "2026-03-17T20:27:00Z"
+      "updatedAt": "2026-03-17T20:27:00Z",
+      "completedAt": "2026-03-17T20:29:53.808Z"
     }
   ],
-  "lastUpdated": "2026-03-17T20:15:41.217Z",
+  "lastUpdated": "2026-03-17T20:29:53.808Z",
   "activities": [
     {
       "type": "moved",
       "actor": "AparkE041",
-      "task": "Welcome to Mission Control! \ud83d\udc4b",
+      "task": "Welcome to Mission Control! 👋",
+      "from": "review",
+      "to": "done",
+      "time": "just now"
+    },
+    {
+      "type": "moved",
+      "actor": "AparkE041",
+      "task": "Welcome to Mission Control! 👋",
       "from": "backlog",
       "to": "in_progress",
       "time": "just now"
@@ -51,7 +60,7 @@
     {
       "type": "moved",
       "actor": "AparkE041",
-      "task": "Welcome to Mission Control! \ud83d\udc4b",
+      "task": "Welcome to Mission Control! 👋",
       "from": "in_progress",
       "to": "backlog",
       "time": "just now"
