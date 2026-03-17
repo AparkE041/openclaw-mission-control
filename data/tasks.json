@@ -63,11 +63,20 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-03-17T20:42:40.973Z",
-      "status": "backlog"
+      "status": "in_progress",
+      "sortOrder": 0
     }
   ],
-  "lastUpdated": "2026-03-17T20:42:40.973Z",
+  "lastUpdated": "2026-03-17T20:43:29.421Z",
   "activities": [
+    {
+      "type": "moved",
+      "actor": "AparkE041",
+      "task": "Test",
+      "from": "backlog",
+      "to": "in_progress",
+      "time": "just now"
+    },
     {
       "type": "moved",
       "actor": "AparkE041",
