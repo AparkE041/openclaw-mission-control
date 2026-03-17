@@ -13,6 +13,13 @@
             --border: #333333;
         }
 
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -23,7 +30,8 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: var(--bg-primary);
             color: var(--text-primary);
-            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Header */
@@ -274,7 +282,9 @@
         /* Main Layout */
         .main {
             display: flex;
-            height: calc(100vh - 180px);
+            flex: 1;
+            min-height: 0; /* Important for flex children to scroll properly */
+            overflow: hidden;
         }
 
         /* Kanban Board */
@@ -284,7 +294,27 @@
             gap: 1rem;
             padding: 1rem 2rem;
             overflow-x: auto;
+            overflow-y: hidden;
             align-items: stretch;
+            min-width: 0; /* Allow flex child to shrink below content size */
+        }
+
+        .kanban::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .kanban::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+            border-radius: 4px;
+        }
+
+        .kanban::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        .kanban::-webkit-scrollbar-thumb:hover {
+            background: var(--text-secondary);
         }
 
         .column {
@@ -556,9 +586,23 @@
             flex: 1;
             padding-bottom: 1rem;
             align-items: stretch; /* Cards take full width but not full height */
-            min-height: 100%; /* Ensure drop zone extends to bottom of tallest column */
-            max-height: calc(100vh - 200px); /* Scrollable columns */
+            min-height: 50px; /* Minimum for drop zone */
+            max-height: calc(100vh - 250px); /* Scrollable columns with more room */
             overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .column-tasks::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .column-tasks::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .column-tasks::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 3px;
         }
 
         /* Thinking Panel */
