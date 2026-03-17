@@ -4,7 +4,7 @@
       "id": "welcome_001",
       "title": "Welcome to Mission Control! \ud83d\udc4b",
       "description": "This is your first task. Move it to 'in_progress' to have your agent work on it.",
-      "status": "in_progress",
+      "status": "review",
       "subtasks": [
         {
           "id": "sub_001",
@@ -36,12 +36,18 @@
           "author": "Andrew",
           "text": "Testing webhook integration",
           "timestamp": "2026-03-17T20:33:00Z"
+        },
+        {
+          "id": "comment_agent_002",
+          "author": "Byte",
+          "text": "\u2705 Webhook working! Mission Control is now fully functional. Task processed via cloudflared tunnel + webhook relay.",
+          "timestamp": "2026-03-17T20:42:00Z"
         }
       ],
       "processingStartedAt": null,
       "processing": null,
       "sortOrder": 0,
-      "updatedAt": "2026-03-17T20:41:00Z",
+      "updatedAt": "2026-03-17T20:42:00Z",
       "completedAt": "2026-03-17T20:29:53.808Z",
       "completion_comment": "Task acknowledged and processed by Mission Control poller. Agent successfully received and processed the welcome task. Ready for closure.",
       "completed_at": "2026-03-17T20:39:02.959601Z"
