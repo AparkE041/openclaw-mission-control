@@ -1,0 +1,1 @@
+/Users/andrewassistant/.openclaw/workspace/mission-control/scripts/mc-update.sh
